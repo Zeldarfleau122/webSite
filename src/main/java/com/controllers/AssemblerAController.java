@@ -329,6 +329,8 @@ public class AssemblerAController {
             input[lastIndex] = 0 ;
 
             cpuState = this.cpu.writeInput(input) ;
+        } else {
+            cpuState.setState(-10);                 // Error not hexa input.
         }
 
         return cpuState ;

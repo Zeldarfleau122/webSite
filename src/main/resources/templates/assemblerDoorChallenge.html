@@ -34,19 +34,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a40', end
             </button>
             <div class="collapse d-inline-block" style="font-size:130%;" id="navbarResponsive">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                        <a class="nav-link" href="#">Disconned HAL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Inside the Nostromo</a>
                     </li>
                 </ul>
             </div>
@@ -185,6 +180,7 @@ If needed, use "help" command.
                     <p>Input request.</p>
                     <input id="userInput" name="userInput" type="text"/>
                 </div>
+                <label id="errorHexa" class="control-label" for="userInput" style="display: none;">Input with error</label>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="inputValidation">Send</button>
                 </div>
@@ -197,7 +193,7 @@ If needed, use "help" command.
         <div class="modal-dialog">
 
             <!-- Modal content-->
-            <div class="modal-content" style="
+            <div class="modal-content" style="width:800px; border: 10px solid orange;
 background: rgba(0,0,0,1);
 background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(0%, rgba(128,128,128,1)), color-stop(7%, rgba(97,97,97,0.99)), color-stop(10%, rgba(251,249,251,0.99)), color-stop(13%, rgba(140,49,64,0.98)), color-stop(74%, rgba(25,9,11,0.9)), color-stop(87%, rgba(0,0,0,0.9)), color-stop(90%, rgba(251,249,251,0.9)), color-stop(93%, rgba(49,49,7,0.9)), color-stop(100%, rgba(5,0,5,0.9)));
@@ -210,8 +206,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
                 <div class="modal-header" style="border: 10px solid orange;">
                     <h4 align="center" class="font-weight-bold" style="color:#ec9300;">Warning :</h4>
                 </div>
-                <div class="modal-body" style="border: 10px solid orange;">
-                    <p align="center" style="color:#ec9300;">This door leads to HAL's cognitive circuits. As part of your ship, the Discovery One, and for you safety it is highly recommand to keep this door closed. However, only in extreme necessity case, you can open the door by requesting the password needed to Hearth.</p>
+                <div class="modal-body mx-auto">
+                    <p align="center" style="color:#ec9300; width: 500px;">This door leads to HAL's cognitive circuits. As part of your ship, the Discovery One, and for you safety it is highly recommand to keep this door closed. However, only in extreme necessity case, you can open the door by requesting the password needed to Hearth.</p>
                 </div>
             </div>
 

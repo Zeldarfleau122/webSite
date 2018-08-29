@@ -30,8 +30,15 @@ $(document).ready(function(){
         if (parseInt(data.state) == 1) {
             $("#userInputWindow").modal('show');
             setTimeout(function() {$('#userInput').focus()}, 250) ;
+            $("#your-div-id").css("display", "none");
         } else {
-            $("#userInputWindow").modal('hide');
+            if (parseInt(data.state) == -10) {
+                $("#userInputWindow").modal('show');
+                setTimeout(function() {$('#userInput').focus()}, 250) ;
+                $("#errorHexa").css("display", "block");
+            } else {
+                $("#userInputWindow").modal('hide');
+            }
         }
 
         var lineChanged = data.memoryLineChange ;
@@ -149,7 +156,7 @@ $(document).ready(function(){
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             success: function(data) {
-                update(data) ;
+                data.stateupdate(data) ;
             }
         }) ;
 
