@@ -226,7 +226,7 @@ public class AssemblerAController {
 
         model.addAttribute("memory", cpu.getMemory().getMemory()) ;
 
-        return "/assemblerDoorChallenge" ;
+        return "assemblerDoorChallenge" ;
     }
 
     private CPUStateAnswer executeCommand(String userCommand) {
