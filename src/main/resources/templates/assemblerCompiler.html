@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Assembler Compiler</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <a href="#">
+                <img class="img-fluid rounded-circle mb-md-0" src="http://placehold.it/125x125" alt=""/>
+            </a>
+        </div>
+
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form method="get" role="form" action="/assembleTool/assembleRequest">
+                <div class="panel panel-primary mx-auto">
+                    <div class="panel-heading">Assembler :</div>
+                    <div class="panel-body mx-auto">
+                        <textarea cols="150" rows="10" style="resize:none;"></textarea>
+                    </div>
+                </div>
+
+            <button type="submit" id="submit" class="btn btn-primary">Assemble</button>
+        </form>
+
+        <div class="p-4"></div>
+
+            <div>
+                <div class="panel panel-primary mx-auto" style="width:'auto'; height:'auto';">
+                    <div class="panel-heading">Assembled object :</div>
+                    <div class="panel-body mx-auto">
+                        <textarea readonly="readonly" cols="150" rows="10" style="resize:none;"></textarea>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>SQL : Tasks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div>
+        <a href="index.html">
+            <img class="img-fluid rounded-circle mb-md-0" src="http://placehold.it/150x150" alt=""/>
+        </a>
+    </div>
+
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="p-5 border border-success" style="max-width:430px; height: 600px; max-heigh:600px; box-shadow: -10px -10px 5px grey; position:fixed ;left: 0.5%; overflow-y: scroll;">
+                <div class="border border-dark" style="margin-bottom:10%;" th:each="challenge : ${challenges}">
+                    <span class="glyphicon glyphicon-info-sign" style="font-size:150%"></span>
+                    <h4 class="text-center" th:text="${challenge.title}"></h4>
+                    <div class="mx-auto" th:text="${challenge.content}"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="p-2"></div>
+
+            <div class="starter-template">
+                <form action="/TaskSite/register/addUser" method="post" role="form">
+                    <legend>Connection</legend>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+</body>
+</html>

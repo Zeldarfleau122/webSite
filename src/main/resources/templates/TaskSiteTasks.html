@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>SQL : Tasks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="..\javascript\challengePresentation.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div>
+        <a href="index.html">
+            <img class="img-fluid rounded-circle mb-md-0" src="http://placehold.it/150x150" alt=""/>
+        </a>
+    </div>
+
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/TaskSite/tasks">My Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/TaskSite/profil">Profil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="p-5 border border-success" style="max-width:430px; height: 500px; max-heigh:500px; box-shadow: -10px -10px 5px grey; position:fixed ;left: 0.5%; overflow-y: scroll;">
+                <div style="margin-bottom:10%;" th:each="challenge : ${challenges}" th:id="${challenge.id}">
+                    <span class="glyphicon glyphicon-info-sign" style="font-size:150%"></span>
+                    <h4 class="text-center" th:text="${challenge.title}"></h4>
+                    <div class="mx-auto" th:text="${challenge.content}"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="p-2"></div>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffa31a;">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav nav-fill w-100">
+                            <li class="nav-item active border-right">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item border-right">
+                                <a class="nav-link" href="/TaskSite/tasks">Tasks</a>
+                            </li>
+                            <li class="nav-item border-right">
+                                <a class="nav-link" href="/TaskSite/tasks/collaborationTasks">Tasks in collaboration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/TaskSite/profil">My Profil</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">See your tasks here : </h1>
+
+                <form action="/TaskSite/task/share" method="post" role="form">
+                    <div class="form-group">
+                        <label for="textAreaNote">Ecrivez votre note</label>
+                        <textarea name="content" class="form-control" id="textAreaNote" rows="3"></textarea>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary">Enregistrer</button>
+                </form>
+
+                <article th:each="note :${notes}" class="card my-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><a th:href="@{/TaskSite/commentary/noteDetails(id=${note.id})}"><span th:text="${note.id}"></span></a></h2>
+                        <div class="card-text"><p><span th:text="${note.content}"></span></p></div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-default btn-sm" th:onclick="'window.location.href=\'/TaskSite/task/remove?id=' + ${note.id} + '\''">
+                            <span class="glyphicon glyphicon-trash"></span> Remove
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" th:onclick="'window.location.href=\'' + @{/TaskSite/task/modify(id= ${note.id})} + '\''">
+                            <span class="glyphicon glyphicon-edit"></span> Modify
+                        </button>
+
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" th:attr="data-target='#myModal'+${note.id}">Informations sur la note</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" th:id="'myModal'+${note.id}" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Informations sur la note :</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Vous partagez cette note avec : </p>
+                                        <li th:each="collab :${note.collaborateurs}">
+                                            <span th:text="${collab.name}"></span>
+                                        </li>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+</body>
+</html>

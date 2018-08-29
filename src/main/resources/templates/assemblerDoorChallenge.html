@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Assembler Door Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="javascript\assembler.js"></script>
+</head>
+<body style="
+background: rgba(52,58,64,1);
+background: -moz-linear-gradient(top, rgba(52,58,64,1) 0%, rgba(55,66,77,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(52,58,64,1)), color-stop(100%, rgba(55,66,77,1)));
+background: -webkit-linear-gradient(top, rgba(52,58,64,1) 0%, rgba(55,66,77,1) 100%);
+background: -o-linear-gradient(top, rgba(52,58,64,1) 0%, rgba(55,66,77,1) 100%);
+background: -ms-linear-gradient(top, rgba(52,58,64,1) 0%, rgba(55,66,77,1) 100%);
+background: linear-gradient(to bottom, rgba(52,58,64,1) 0%, rgba(55,66,77,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a40', endColorstr='#37424d', GradientType=0 );
+    ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <a href="index.html">
+                <img class="img-fluid rounded-circle mb-md-0" src="http://placehold.it/125x125" alt=""/>
+            </a>
+        </div>
+
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse d-inline-block" style="font-size:130%;" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="width: 1030px;">
+        <div class="p-2"></div>
+
+        <div class="row" style="width:1000px;">
+            <div class="height:150px;">
+                    <img class="img-fluid rounded-circle" src="../img/HAL.png" alt=""/>
+            </div>
+            <div class="col-md-9">
+                <h3 style="color: #FFFFFF;">Project One</h3>
+                <p style="color: #FFFFFF;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+            </div>
+        </div>
+        <div class="p-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="panel panel-danger mx-auto">
+                    <div class="panel-heading">Assembler :</div>
+                    <div class="panel-body" style="overflow:auto; height:400px; padding-bottom: 0px;">
+                        <code readonly="readonly" style="resize:none; background-color: rgba(255,255,255); padding-bottom: 0px;">
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px; " id="00">00   MOV D, 200</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="04">04   CALL GetPassword</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="08">08   CALL CheckPassword</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="0C">0C   CMP D, 0</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="10">10   JZ UnlockDoor</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="14">14   HLT</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="UnlockDoor">UnlockDoor:</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="28">28   OPENDOOR</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="2C">2C   HLT</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="GetPassword">GetPassword:</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="30">30   INT 1, D</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="34">34   MOV B, 1</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="38">38   MOV C, 0</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id=".loopG">     .loopG:</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="3C">3C   MOV A, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="40">40   ADD A, B</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="44">44   MOV [D], A</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="48">48   INC D</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="4C">4C   INC B</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="50">50   CMP C, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="54">54   JNZ .loopG</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="58">58   MOV C, B</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="5C">5C   SUB C, 1</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="60">60   MOV D, 200</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="64">64   CMP B, 4</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="68">68   JA 70</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="6C">6C   HLT</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="70">70   RET</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="CheckPassword">CheckPassword:</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="74">78   MOV B, 1</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id=".loopC">     .loopC:</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="78">78   MOV A, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="7C">7C   MOV C, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="80">80   SUB C, B</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="84">84   CMP A, C</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="88">88   JNE 90</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="8C">8C   INC D</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="90">90   INC B</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="94">94   MOV A, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="98">98   CMP A, 0</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="9C">9C   JNZ .loopC</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="A0">A0   MOV D, [D]</pre>
+                            <pre style="margin: 0px; background-color: rgba(255,255,255); border:0; padding-bottom: 0px;padding-top: 0px;" id="A4">A4   RET</pre>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">RAM</div>
+                    <div style="width:29em; font-size:130%" class="panel-body">
+                        <div style="margin-top:-5px; margin-bottom:-10px;" class="d-block" th:each="i: ${#numbers.sequence(0, 16 - 1)}" th:id="l + ${i}">
+                            <div class="d-inline" th:each="j: ${#numbers.sequence(0, 16 - 1)}">
+                                <small  th:text="${T(java.lang.String).format('%02X',memory[i][j])}" th:id="c + ${j}" style="min-width : 30px; font-family: monospace;">    </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <div class="panel panel-danger" style="font-family: monospace;">
+                    <div class="panel-heading">Registers State</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <th>IP : <span id="regIp" style="background : #ff4d4d;"></span></th>
+                                <th>SP : <span id="regSp" style="background : #0080ff;"></span></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Z : <span id="regZ"></span></td>
+                                <td>C : <span id="regC"></span></td>
+                                <td>F : <span id="regF"></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>A : <span id="reg0"></span></td>
+                                <td>B : <span id="reg1"></span></td>
+                                <td>C : <span id="reg2"></span></td>
+                                <td>D : <span id="reg3"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Debug console</div>
+                    <code>
+<pre id="console" style="height:400px; max-height:400px; overflow:scroll; overflow-y: auto;">
+If needed, use "help" command.
+
+</pre>
+                    </code>
+                    <div style="text-align:center; margin-bottom:5px;">
+                        <input id="userCommand" name="userCommand" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="userInputWindow" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body mx-auto">
+                    <p>Input request.</p>
+                    <input id="userInput" name="userInput" type="text"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="inputValidation">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="intro" class="modal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(0%, rgba(128,128,128,1)), color-stop(7%, rgba(97,97,97,0.99)), color-stop(10%, rgba(251,249,251,0.99)), color-stop(13%, rgba(140,49,64,0.98)), color-stop(74%, rgba(25,9,11,0.9)), color-stop(87%, rgba(0,0,0,0.9)), color-stop(90%, rgba(251,249,251,0.9)), color-stop(93%, rgba(49,49,7,0.9)), color-stop(100%, rgba(5,0,5,0.9)));
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
+background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
+background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(128,128,128,1) 0%, rgba(97,97,97,0.99) 7%, rgba(251,249,251,0.99) 10%, rgba(140,49,64,0.98) 13%, rgba(25,9,11,0.9) 74%, rgba(0,0,0,0.9) 87%, rgba(251,249,251,0.9) 90%, rgba(49,49,7,0.9) 93%, rgba(5,0,5,0.9) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#050005', GradientType=1 );
+">
+                <div class="modal-header" style="border: 10px solid orange;">
+                    <h4 align="center" class="font-weight-bold" style="color:#ec9300;">Warning :</h4>
+                </div>
+                <div class="modal-body" style="border: 10px solid orange;">
+                    <p align="center" style="color:#ec9300;">This door leads to HAL's cognitive circuits. As part of your ship, the Discovery One, and for you safety it is highly recommand to keep this door closed. However, only in extreme necessity case, you can open the door by requesting the password needed to Hearth.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
