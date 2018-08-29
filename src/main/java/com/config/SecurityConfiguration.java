@@ -23,6 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/TaskSite/index").permitAll()
                 .antMatchers("/TaskSiteIndex").permitAll()
+                .antMatchers("/assemblerDoorChallenge").permitAll()
                 .antMatchers("/assemblerDoorChallenge/sendCommand").permitAll()
                 .antMatchers("/TaskSite/*").authenticated()
                 .anyRequest().permitAll()

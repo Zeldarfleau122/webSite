@@ -229,11 +229,6 @@ public class AssemblerAController {
         return "/assemblerDoorChallenge" ;
     }
 
-    @RequestMapping(value="/assembleTool/assembleRequest", method = RequestMethod.GET)
-    public void toAssembler(String instructions) {
-
-    }
-
     private CPUStateAnswer executeCommand(String userCommand) {
         String answer = "" ;
         CPUStateAnswer cpuState = this.cpu.getCPUStateAnswer() ;
