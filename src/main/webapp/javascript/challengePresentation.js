@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-
     var getCookie = function getCookie(cname) {
         var name = cname + "=";
         var decodedCookie = document.cookie ;

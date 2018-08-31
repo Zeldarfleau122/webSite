@@ -330,7 +330,8 @@ public class AssemblerAController {
 
             cpuState = this.cpu.writeInput(input) ;
         } else {
-            cpuState.setState(-10);                 // Error not hexa input.
+            if (cpuState.getState() == 1)
+                cpuState.setState(-10);                 // Error not hexa input.
         }
 
         return cpuState ;

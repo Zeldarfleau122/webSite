@@ -88,6 +88,10 @@ $(document).ready(function(){
         previousSp = data.sp ;
 
         updateInstruction(data.ip) ;
+
+        if (parseInt(data.state) == 3) {
+            $("#success").modal('show');
+        }
     } ;
 
     $("#userCommand").keypress(function(e) {
@@ -156,7 +160,7 @@ $(document).ready(function(){
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             success: function(data) {
-                data.stateupdate(data) ;
+                data.update(data) ;
             }
         }) ;
 
@@ -178,4 +182,5 @@ $(document).ready(function(){
      }) ;
 
      $("#intro").modal("show") ;
+     $("#success").modal('hide');
 });

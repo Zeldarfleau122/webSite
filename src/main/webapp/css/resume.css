@@ -4,6 +4,10 @@ body {
   color: #868e96;
 }
 
+#a_CV {
+    background-color : 0xff00ff;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
