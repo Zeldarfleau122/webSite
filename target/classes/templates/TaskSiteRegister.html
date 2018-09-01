@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div>
-        <a href="index.html">
+        <a href="/index.html">
             <img class="img-fluid rounded-circle mb-md-0" src="http://placehold.it/150x150" alt=""/>
         </a>
     </div>
@@ -37,18 +37,21 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="p-5 border border-success" style="max-width:430px; height: 600px; max-heigh:600px; box-shadow: -10px -10px 5px grey; position:fixed ;left: 0.5%; overflow-y: scroll;">
-                <div class="border border-dark" style="margin-bottom:10%;" th:each="challenge : ${challenges}">
-                    <span class="glyphicon glyphicon-info-sign" style="font-size:150%"></span>
-                    <h4 class="text-center" th:text="${challenge.title}"></h4>
-                    <div class="mx-auto" th:text="${challenge.content}"></div>
-                </div>
-            </div>
-        </div>
+    <div class="row" style="display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="border-radius: 10px 10px 10px 10px; height:600px;
+background: rgba(102,102,102,1);
+background: -moz-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(89,89,89,1) 17%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 52%, rgba(28,28,28,1) 64%, rgba(0,0,0,1) 74%, rgba(17,17,17,1) 89%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,102,102,1)), color-stop(17%, rgba(89,89,89,1)), color-stop(35%, rgba(71,71,71,1)), color-stop(52%, rgba(44,44,44,1)), color-stop(64%, rgba(28,28,28,1)), color-stop(74%, rgba(0,0,0,1)), color-stop(89%, rgba(17,17,17,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(89,89,89,1) 17%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 52%, rgba(28,28,28,1) 64%, rgba(0,0,0,1) 74%, rgba(17,17,17,1) 89%, rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(89,89,89,1) 17%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 52%, rgba(28,28,28,1) 64%, rgba(0,0,0,1) 74%, rgba(17,17,17,1) 89%, rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(89,89,89,1) 17%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 52%, rgba(28,28,28,1) 64%, rgba(0,0,0,1) 74%, rgba(17,17,17,1) 89%, rgba(19,19,19,1) 100%);
+background: linear-gradient(to bottom, rgba(102,102,102,1) 0%, rgba(89,89,89,1) 17%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 52%, rgba(28,28,28,1) 64%, rgba(0,0,0,1) 74%, rgba(17,17,17,1) 89%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#131313', GradientType=0 );
+">
             <div class="p-2"></div>
 
             <div class="starter-template">
@@ -69,8 +72,6 @@
                 </form>
             </div>
         </div>
-
-        <div class="col-lg-3"></div>
     </div>
 </div>
 </body>
