@@ -10,6 +10,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="..\javascript\login.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            document.getElementById('username').focus();
+
+            $("#username").keypress(function(e) {
+                if(e.which == 13) {
+                    $("#login").trigger('click');
+                }
+            }) ;
+
+            $("#password").keypress(function(e) {
+                if(e.which == 13) {
+                    $("#login").trigger('click');
+                }
+            }) ;
+        }) ;
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -62,9 +80,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 
             <div class="starter-template">
                     <legend class="text-center" style="color:#FFFFFF;">Connection</legend>
-                    <!--<form action="/TaskSite/login" method="POST">-->
+
                     <div class="form-group">
-                        <label for="username" style="color:#FFFFFF;">Username</label>
+                        <label for="username" style="color:#FFFFFF;" autofocus="true">Username</label>
                         <input type="text" class="form-control" name="username" id="username"/>
                     </div>
                     <div class="form-group">
@@ -72,12 +90,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
                         <input type="password" class="form-control" name="password" id="password"/>
                     </div>
 
-                    <button type="submit" class="btn" id="login" style="background-color: #2eb82e; color:#FFFFFF;   ">Login</button>
-                <!--</form>-->
-                <div>
-                    <a href="/TaskSite/register">
-                        <span>Register</span>
-                    </a>
+                <div style="display: flex;justify-content: space-between;">
+                    <button type="submit" class="btn" id="register" style="background-color: #2eb82e; color:#FFFFFF;" onclick="location.href='/TaskSite/register';">Register</button>
+
+                    <button type="submit" class="btn" id="login" style="background-color: #2eb82e; color:#FFFFFF;">Login</button>
                 </div>
             </div>
         </div>

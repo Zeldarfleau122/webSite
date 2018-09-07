@@ -47,7 +47,6 @@
             <div class="col-lg-3">
                 <div class="p-5 border border-success" style="max-width:430px; height: 500px; max-heigh:500px; box-shadow: -10px -10px 5px grey; position:fixed ;left: 0.5%;">
                     <div style="border:5px solid red; margin-bottom:10%;" th:each="challenge : ${challenges}" th:id="${challenge.id}">
-                        <span class="glyphicon glyphicon-info-sign" style="font-size:150%"></span>
                         <h4 class="text-center" th:text="${challenge.title}"></h4>
                         <div class="mx-auto" th:text="${challenge.content}"></div>
                     </div>

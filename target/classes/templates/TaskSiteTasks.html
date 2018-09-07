@@ -47,7 +47,6 @@
         <div class="col-lg-3">
             <div class="p-5 border border-success" style="max-width:430px; height: 500px; max-heigh:500px; box-shadow: -10px -10px 5px grey; position:fixed ;left: 0.5%;">
                 <div style="margin-bottom:10%;" th:each="challenge : ${challenges}" th:id="${challenge.id}">
-                    <span class="glyphicon glyphicon-info-sign" style="font-size:150%"></span>
                     <h4 class="text-center" th:text="${challenge.title}"></h4>
                     <div class="mx-auto" th:text="${challenge.content}"></div>
                 </div>
@@ -104,39 +103,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
                     <div class="card-body">
                         <h2 class="card-title"><a th:href="@{/TaskSite/commentary/noteDetails(id=${note.id})}"><span th:text="${note.id}"></span></a></h2>
                         <div class="card-text"><p><span th:text="${note.content}"></span></p></div>
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-default btn-sm" th:onclick="'window.location.href=\'/TaskSite/task/remove?id=' + ${note.id} + '\''">
-                            <span class="glyphicon glyphicon-trash"></span> Remove
-                        </button>
-                        <button type="button" class="btn btn-default btn-sm" th:onclick="'window.location.href=\'' + @{/TaskSite/task/modify(id= ${note.id})} + '\''">
-                            <span class="glyphicon glyphicon-edit"></span> Modify
-                        </button>
-
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" th:attr="data-target='#myModal'+${note.id}">Informations sur la note</button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" th:id="'myModal'+${note.id}" role="dialog">
-                            <div class="modal-dialog">
-
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Informations sur la note :</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Vous partagez cette note avec : </p>
-                                        <li th:each="collab :${note.collaborateurs}">
-                                            <span th:text="${collab.name}"></span>
-                                        </li>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </article>
             </div>
