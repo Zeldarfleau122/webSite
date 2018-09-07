@@ -134,7 +134,7 @@ $(document).ready(function(){
     });
 
     $("#userInput").keypress(function(e) {
-        if(e.which == 13) {
+        if((e.which == 13) && ($("#userInput").val() != "")) {
             input = $("#userInput").val() ;
 
             $.ajax({
@@ -152,19 +152,21 @@ $(document).ready(function(){
     }) ;
 
     $("#inputValidation").click(function(){
-        input = $("#userInput").val() ;
+        if($("#userInput").val() != "") {
+            input = $("#userInput").val() ;
 
-        $.ajax({
-            url: "/assemblerDoorChallenge/sendInput",
-            data: {"userInput" : input},
-            contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            success: function(data) {
-                data.update(data) ;
-            }
-        }) ;
+            $.ajax({
+                url: "/assemblerDoorChallenge/sendInput",
+                data: {"userInput" : input},
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                success: function(data) {
+                    update(data) ;
+                }
+            }) ;
 
-        $("#userInput").val("") ;
+            $("#userInput").val("") ;
+        }
     }) ;
 
      $.ajax({

@@ -32,15 +32,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a40', end
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse d-inline-block" style="font-size:130%;" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
+            <div class="collapse d-inline-block" style="font-size:130%; width:100%;" id="navbarResponsive">
+                <ul class="navbar-nav" style="width:100%">
+                    <li class="nav-item border-right border-left text-center" style="float: left; width: 33%;">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active border-right border-left text-center" style="float: left; width: 33%;">
                         <a class="nav-link" href="#">Disconned HAL</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item border-right border-left text-center" style="float: left; width: 33%;">
                         <a class="nav-link" href="/TaskSite/index">Inside the Nostromo</a>
                     </li>
                 </ul>
@@ -120,8 +120,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a40', end
                 <div class="panel panel-danger">
                     <div class="panel-heading">RAM</div>
                     <div style="width:29em; font-size:130%" class="panel-body">
-                        <div style="margin-top:-5px; margin-bottom:-10px;" class="d-block" th:each="i: ${#numbers.sequence(0, 16 - 1)}" th:id="l + ${i}">
-                            <div class="d-inline" th:each="j: ${#numbers.sequence(0, 16 - 1)}">
+                        <div style="margin-top:-5px; magin-bottom:-2px;" class="d-block" th:each="i: ${#numbers.sequence(0, 16 - 1)}" th:id="l + ${i}">
+                            <div class="d-inline" th:each="j: ${#numbers.sequence(0, 16 - 1)}" style="padding-right: 3px;">
                                 <small  th:text="${T(java.lang.String).format('%02X',memory[i][j])}" th:id="c + ${j}" style="min-width : 30px; font-family: monospace;">    </small>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
                     <h4 align="center" class="font-weight-bold" style="color:#ec9300;">Success :</h4>
                 </div>
                 <div class="modal-body mx-auto">
-                    <p align="center" style="color:#ec9300; width: 500px;">You manage to open the door !  [Write NEXT !!!!]</p>
+                    <p align="center" style="color:#ec9300; width: 500px;">You manage to open the door !  [Write NEXT !!!!] Retour CV / Retour menu.</p>
                 </div>
             </div>
 

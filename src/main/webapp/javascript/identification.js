@@ -22,6 +22,8 @@ $(document).ready(function(){
     var logout = function() {
         deleteCookie("username") ;
         deleteCookie("password") ;
+
+        window.location = "index";
     }
 
     var isLogged = function() {

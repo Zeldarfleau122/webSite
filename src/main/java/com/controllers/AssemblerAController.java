@@ -312,7 +312,10 @@ public class AssemblerAController {
     public CPUStateAnswer getInput(String userInput) {
         CPUStateAnswer cpuState = this.cpu.getCPUStateAnswer() ;
 
+        System.out.println("1") ;
+
         if (checkHexa(userInput) && (cpuState.getState() == 1)) {
+            System.out.println("2") ;
             int[] input = new int[userInput.length()/2 + 1] ;
             String temp ;
             int lastIndex = 0 ;
@@ -327,9 +330,10 @@ public class AssemblerAController {
                 lastIndex = i+1 ;
             }
             input[lastIndex] = 0 ;
-
+            System.out.println("3") ;
             cpuState = this.cpu.writeInput(input) ;
         } else {
+            System.out.println("21") ;
             if (cpuState.getState() == 1)
                 cpuState.setState(-10);                 // Error not hexa input.
         }
