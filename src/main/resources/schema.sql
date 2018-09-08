@@ -93,4 +93,4 @@ INSERT INTO NOTEINCOLLAB VALUES(6, 3, 'Bolaji Badejo') ;
 
 INSERT INTO CHALLENGE VALUES(1, 'Find the party''s conversation', 'You know that the party''s conversation is one of the first created on this website.') ;
 INSERT INTO CHALLENGE VALUES(2, 'XSS : Get some one else account', 'Use "$.ajax({url:''share?id_Note=3'',type:''GET'', data:''content=''+document.cookie})" as a click event on a button.   ') ;
-INSERT INTO CHALLENGE VALUES(3, 'The 8th passenger', 'Use the session ID to access someone else profil page.') ;
+INSERT INTO CHALLENGE VALUES(3, 'The 8th passenger', 'Connect to one account of the crew.') ;

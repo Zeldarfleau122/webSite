@@ -72,7 +72,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav nav-fill w-100">
                             <li class="nav-item active border-right">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="/TaskSite/index">Index</a>
                             </li>
                             <li class="nav-item border-right">
                                 <a class="nav-link" href="/TaskSite/tasks">Tasks</a>
@@ -89,15 +89,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
             </nav>
 
             <div class="container-fluid" style="max-height: 500px; overflow: auto;">
-                <h1 class="mt-4" style="color:#ffffff;">See your tasks here : </h1>
+                <h1 class="mt-4" style="color:#ffffff;">Create a new post : </h1>
 
-                <form action="/TaskSite/task/share" method="post" role="form">
-                    <div class="form-group">
-                        <label for="textAreaNote" style="color:#ffffff;">Ecrivez votre note</label>
-                        <textarea name="content" class="form-control" id="textAreaNote" rows="3"></textarea>
+                <div style="text-align: center;">
+                    <div style="    display: inline-block;
+    *display: inline; /* IE7 fix for inline-block */
+    *zoom: 1;         /* IE7 fix for inline-block */">
+                        <form action="/TaskSite/task/share" method="post" role="form">
+                            <textarea placeholder="Title" name="content" class="form-control mx-auto" id="titleAreaNote" style="resize: none; width: 40em; height: 2.5em;"></textarea>
+
+                            <textarea placeholder="Content" name="content" class="form-control mx-auto" id="textAreaNote" rows="3" style="resize: none; width: 40em;"></textarea>
+
+                            <button type="submit" id="submit" class="btn" style="background-color: #2eb82e; color:#ffffff;">Save</button>
+                        </form>
                     </div>
-                    <button type="submit" id="submit" class="btn" style="background-color: #2eb82e; color:#ffffff;">Enregistrer</button>
-                </form>
+                </div>
 
                 <article th:each="note :${notes}" class="card my-4">
                     <div class="card-body">
