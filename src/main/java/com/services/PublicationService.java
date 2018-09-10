@@ -24,8 +24,8 @@ public class PublicationService {
      *
      * @param contenu Contenu de la note a sauvegarder.
      */
-    public void post(String contenu, String userName) {
-        this.noteRepository.save(new Note(contenu), userName) ;           // Creation d'une note et demande de sauvegarde.
+    public void post(String title, String contenu, String userName) {
+        this.noteRepository.save(new Note(title, contenu), userName) ;           // Creation d'une note et demande de sauvegarde.
     }
 
     /**

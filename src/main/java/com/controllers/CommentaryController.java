@@ -78,13 +78,14 @@ public class CommentaryController {
         return new Commentary(answer, author) ;
     }
 
-    @RequestMapping(value= "/TaskSite/commentary/noteDetails", method = RequestMethod.GET)
+    @RequestMapping(value= "/TaskSite/noteDetails", method = RequestMethod.GET)
     public String noteDetails(@RequestParam(value="id") int id, Principal principal, Model model, HttpServletResponse response) {
         getChallenge(model) ;
 
         List<Note> result = feedService.find(id) ;
         Note note = result.get(0) ;
 
+        model.addAttribute("noteDetailsTitle", note.title) ;
         model.addAttribute("noteDetailsContent", note.content) ;
         model.addAttribute("noteDetailsId", id) ;
 

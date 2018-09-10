@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="..\javascript\challengePresentation.js"></script>
-    <script src="..\javascript\identification.js"></script>
+    <script src="..\javascript\identificationPresentation.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -94,7 +94,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
                 <div style="text-align: center;">
                     <div style="    display: inline-block;*display: inline; /* IE7 fix for inline-block */*zoom: 1;         /* IE7 fix for inline-block */">
                         <form action="/TaskSite/task/share" method="post" role="form">
-                            <textarea placeholder="Title" name="content" class="form-control mx-auto" id="titleAreaNote" style="resize: none; width: 40em; height: 2.5em;"></textarea>
+                            <textarea placeholder="Title" name="title" class="form-control mx-auto" id="titleAreaNote" style="resize: none; width: 40em; height: 2.5em;"></textarea>
 
                             <textarea placeholder="Content" name="content" class="form-control mx-auto" id="textAreaNote" rows="3" style="resize: none; width: 40em;"></textarea>
 
@@ -105,7 +105,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 
                 <article th:each="note :${notes}" class="card my-4">
                     <div class="card-body">
-                        <h2 class="card-title"><a th:href="@{/TaskSite/commentary/noteDetails(id=${note.id})}"><span th:text="${note.id}"></span></a></h2>
+                        <h2 class="card-title"><a th:href="@{/TaskSite/noteDetails(id=${note.id})}"><span th:text="${note.title}"></span></a></h2>
                         <div class="card-text"><p><span th:text="${note.content}"></span></p></div>
                     </div>
                 </article>

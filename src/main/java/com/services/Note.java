@@ -10,14 +10,16 @@ public class Note {
     public int id ;                // Identifiant d'une note. ( Unique )
     public String content;         // Contenu.
     public List<Collaborateur> collaborateurs ;
+    public String title ;
 
     /**
      * Constructeur.
      *
      * @param content Contenu de la note.
      */
-    public Note(String content) {
+    public Note(String title, String content) {
         this.content = content;
+        this.title = title ;
     }
 
     /**
@@ -36,9 +38,10 @@ public class Note {
      * @param ID Identifiant de la note.
      * @param content Contenu de la note.
      */
-    public Note(int ID, String content) {
+    public Note(int ID, String title, String content) {
         this.id = ID ;
         this.content = content ;
+        this.title = title ;
     }
 
     /**
@@ -68,6 +71,10 @@ public class Note {
      */
     public String getContent() {
         return content;
+    }
+
+    public String getTitle() {
+        return title ;
     }
 
     /**

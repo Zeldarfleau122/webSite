@@ -29,8 +29,8 @@ public class JdbcNoteRepository implements NoteRepository, LoginRepository {
      * @param note Note a sauvegarder.
      */
     public void save(Note note, String userName) {
-        String query = "INSERT INTO NOTE (CONTENT, username)VALUES(?,?)" ;
-        jdbcTemplate.update(query, note.getContent(), userName);
+        String query = "INSERT INTO NOTE (TITLE, CONTENT, username)VALUES(?,?, ?)" ;
+        jdbcTemplate.update(query, note.getTitle(), note.getContent(), userName);
     }
 
     /**
@@ -83,9 +83,10 @@ public class JdbcNoteRepository implements NoteRepository, LoginRepository {
 
         @Override
         public Note mapRow(ResultSet rs, int rowNum) throws SQLException {
+            String title = rs.getString("TITLE");
             String content = rs.getString("CONTENT");
             int id = rs.getInt("ID") ;
-            return new Note(id, content);
+            return new Note(id, title, content);
         }
     }
 

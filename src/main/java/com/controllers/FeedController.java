@@ -2,6 +2,7 @@ package com.controllers;
 
 
 import com.services.*;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +39,19 @@ public class FeedController {
         model.addAttribute("challenges", challengeService.fetchAll()) ;
     }
 
+    @RequestMapping(value="/TaskSite/verifyLogin", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Boolean verifyLogin(String username, String password) {
+        Boolean validate = false ;
+
+        if ((username == "John Hurt") && (password == "Nostromo"))
+            validate = true ;
+
+        System.out.println((username == "John Hurt") && (password == "Nostromo")) ;
+
+        return validate ;
+    }
+
     @RequestMapping(value = "/TaskSite/index", method = RequestMethod.GET)
     public String index(Model model) {
         getChallenge(model) ;
@@ -51,7 +65,7 @@ public class FeedController {
      */
     @RequestMapping(value = "/TaskSite/task/remove", params="id", method = RequestMethod.GET)
     public String delete(@RequestParam("id") int id, Principal principal) {
-        publicationService.remove(id, principal.getName());
+        //publicationService.remove(id, principal.getName());
         return "redirect:/TaskSite/tasks";
     }
 
@@ -62,8 +76,8 @@ public class FeedController {
      * @return Renvoie true si bon fonctionnement.
      */
     @RequestMapping(value = "/TaskSite/task/share", method = RequestMethod.POST)
-    public String post(String content, Principal principal) {
-        publicationService.post(content, principal.getName());
+    public String post(String title, String content, Principal principal) {
+        publicationService.post(title, content, principal.getName());
         return "redirect:/TaskSite/tasks";
     }
 
@@ -75,7 +89,7 @@ public class FeedController {
      */
     @RequestMapping(value = "/TaskSite/task/update", params = { "id", "content" }, method = RequestMethod.POST)
     public String update(@RequestParam(value="id") int id,String content, Principal principal) {
-        publicationService.update(id, content, principal.getName());
+        //publicationService.update(id, content, principal.getName());
         return "redirect:/TaskSite/tasks";
     }
 
@@ -113,7 +127,7 @@ public class FeedController {
 
     @RequestMapping(value = "/TaskSite/tasks/addCollaborateur", method = RequestMethod.POST)
     public String addCollaborateur(@RequestParam(value="id") int id, String collaborateur, Principal principal, Model model) {
-        publicationService.addCollaborateur(id, collaborateur, principal.getName()) ;
+        //publicationService.addCollaborateur(id, collaborateur, principal.getName()) ;
 
         // HttpServletRequest request // System.out.println("IP : " + request.getRemoteAddr()) ;
 

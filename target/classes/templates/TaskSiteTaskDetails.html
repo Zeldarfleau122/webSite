@@ -11,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="..\..\javascript\challengePresentation.js"></script>
     <script src="..\..\javascript\noteDetails.js"></script>
-    <script src="..\javascript\identification.js"></script>
+    <script src="..\javascript\identificationPresentation.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -92,7 +92,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
             <div class="container-fluid">
                 <article class="card my-4 w-75 mx-auto">
                     <div class="card-body">
-                        <h2 class="card-title"><span th:text="${noteDetailsId}"></span></h2>
+                        <h2 class="card-title"><span th:text="${noteDetailsTitle}"></span></h2>
                         <div class="card-text"><p><span th:text="${noteDetailsContent}"></span></p></div>
                     </div>
                 </article>
