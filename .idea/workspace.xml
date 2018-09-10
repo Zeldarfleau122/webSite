@@ -5,36 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c419251e-f179-4b2a-9bae-eefce1ef1b96" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/persistence/JdbcNoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/persistence/JdbcNoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/PublicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/PublicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteProfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskModification.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskModification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTasks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/javascript/identification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/javascript/identificationPresentation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/javascript/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/javascript/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controllers/CommentaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controllers/CommentaryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controllers/FeedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controllers/FeedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository$CollabMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository$CollabMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository$NoteMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository$NoteMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/persistence/JdbcNoteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/services/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/services/Note.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/services/PublicationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/services/PublicationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TaskSiteIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/TaskSiteIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TaskSiteProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/TaskSiteProfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TaskSiteTaskDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/TaskSiteTaskDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TaskSiteTaskModification.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/TaskSiteTaskModification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TaskSiteTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/TaskSiteTasks.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,49 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TaskSiteIndex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/TaskSiteIndex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="57" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskSiteProfil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/TaskSiteProfil.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TaskSiteRegister.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/TaskSiteRegister.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskSiteTasks.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TaskSiteTasks.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/TaskSiteTasks.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -156,20 +86,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="identificationPresentation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/identificationPresentation.js">
+      <file leaf-file-name="FeedController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="518">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="challengePresentation.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="challengePresentation.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+            <state relative-caret-position="507">
+              <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assembler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/assembler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="noteDetails.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/noteDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentaryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssemblerAController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/AssemblerAController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="343" selection-start-line="343" selection-end-line="344" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -189,38 +155,6 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskSiteLogin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/TaskSiteLogin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#legend#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -319,14 +253,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/services/Note.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/config/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/javascript/login.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TaskSiteIndex.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TaskSiteProfil.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskDetails.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTaskModification.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/TaskSiteTasks.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js" />
       </list>
     </option>
   </component>
@@ -523,21 +457,21 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.persistence" />
+      <recent name="com.services" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\webapp\img" />
+      <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\resources\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\webapp\img" />
       <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\webapp\javascript" />
       <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\resources\templates" />
       <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\resources\javascript" />
       <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\webapp\img" />
-      <recent name="C:\Users\Jonathan\IdeaProjects\SiteProfessionnel\src\main\resources\templates" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.persistence" />
-      <recent name="com.services" />
-      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -894,27 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/AssemblerAController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="343" selection-start-line="343" selection-end-line="344" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/noteDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/assembler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1289">
-          <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -933,27 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1106,6 +998,48 @@
             <element signature="n#style#0;n#textarea#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/CommentaryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/AssemblerAController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="343" selection-start-line="343" selection-end-line="344" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controllers/FeedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/assembler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/noteDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/challengePresentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
         </state>
       </provider>
     </entry>

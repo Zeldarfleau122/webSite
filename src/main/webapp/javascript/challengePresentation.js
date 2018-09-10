@@ -26,10 +26,9 @@ $(document).ready(function(){
 
                 expires.setTime(today.getTime() + (60*60*1000));
 
-                if (data.validate) {
+                if (data) {
                     document.cookie = "Challenge3=1" + ";expires=" + expires.toGMTString();
-                } else {
-                    document.cookie = "Challenge3=0" + ";expires=" + expires.toGMTString();
+                    verifyChallengeValidation() ;
                 }
             }
          }) ;

@@ -44,10 +44,12 @@ public class FeedController {
     public Boolean verifyLogin(String username, String password) {
         Boolean validate = false ;
 
-        if ((username == "John Hurt") && (password == "Nostromo"))
+        if (username.equals("John Hurt") && password.equals("Nostromo"))
             validate = true ;
 
-        System.out.println((username == "John Hurt") && (password == "Nostromo")) ;
+        System.out.println(username.equals("John Hurt")) ;
+        System.out.println(username.equals("Nostromo")) ;
+        System.out.println(validate) ;
 
         return validate ;
     }
