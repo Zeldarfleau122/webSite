@@ -100,8 +100,41 @@ public class CommentaryController {
             cookie.setMaxAge(60 * 60);
             //add the cookie to the  response
             response.addCookie(cookie);
+
+            return "TaskSitePassword" ;
         }
 
         return "TaskSiteTaskDetails" ;
+    }
+
+    @RequestMapping(value= "/TaskSite/protectedNoteDetails", method = RequestMethod.GET)
+    public String noteDetails(@RequestParam(value="id") int id,@RequestParam(value="password") String password, Model model, HttpServletResponse response) {
+        getChallenge(model) ;
+
+        List<Note> result = feedService.find(id) ;
+        Note note = result.get(0) ;
+
+        model.addAttribute("noteDetailsTitle", note.title) ;
+        model.addAttribute("noteDetailsContent", note.content) ;
+        model.addAttribute("noteDetailsId", id) ;
+
+        List<Commentary> commentaries = this.commentaryFeedService.fetchAll(id);
+        model.addAttribute("commentaries", commentaries);
+
+        if (id == 3) {
+            if (password.equals("test")) {
+                //create a cookie with name 'website' and value 'javapointers'
+                Cookie cookie = new Cookie("Challenge1", "1");
+                //set the expiration time
+                //1 hour = 60 seconds x 60 minutes
+                cookie.setMaxAge(60 * 60);
+                //add the cookie to the  response
+                response.addCookie(cookie);
+
+                return "TaskSiteTaskDetails" ;
+            }
+        }
+
+        return "TaskSitePassword" ;
     }
 }
