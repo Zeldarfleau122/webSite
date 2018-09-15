@@ -81,9 +81,9 @@ insert into authorities values ('Yaphet Kotto', 'USER');
 INSERT INTO users values ('Bolaji Badejo', 'Nostromo', true);
 insert into authorities values ('Bolaji Badejo', 'USER');
 
-INSERT INTO NOTE VALUES(1,'Set down on LV-426', 'June 3 2122, after a long trip we landed on LV-426. Unfortunately, the engineering dust entered in the engines, causing it to overheat, the engineering section must be repared.', 'Tom Skerritt') ;
-INSERT INTO NOTE VALUES(2, 'False 2', 'False 2', 'Tom Skerritt') ;
-INSERT INTO NOTE VALUES(3, 'TRUE NOTE', 'TRUE NOTE !!! TO WRITE !!', 'Tom Skerritt') ;
+INSERT INTO NOTE VALUES(1,'Set down on LV-426', 'June 3 2122, after a long trip we landed on LV-426. Unfortunately, the engineering dust entered in the engines, causing it to overheat, the engineering section must be repaired.', 'Tom Skerritt') ;
+INSERT INTO NOTE VALUES(2, 'Kane''s serious incident', 'During an expedition outdoor, Kane was attack by an unknown life form. We decided to take off, even if the engines are not fully repaired.', 'Tom Skerritt') ;
+INSERT INTO NOTE VALUES(3, 'Horror aboard', 'An alien got out of Kane, it grows fast. We have no chance to get out of here alive.', 'Tom Skerritt') ;
 
 INSERT INTO NOTEINCOLLAB VALUES(1, 3, 'Veronica Cartwright') ;
 INSERT INTO NOTEINCOLLAB VALUES(2, 3, 'Harry Dean Stanton') ;
@@ -92,6 +92,6 @@ INSERT INTO NOTEINCOLLAB VALUES(4, 3, 'Ian Holm') ;
 INSERT INTO NOTEINCOLLAB VALUES(5, 3, 'Yaphet Kotto') ;
 INSERT INTO NOTEINCOLLAB VALUES(6, 3, 'Bolaji Badejo') ;
 
-INSERT INTO CHALLENGE VALUES(1, 'Find the party''s conversation', 'You know that the party''s conversation is one of the first created on this website.') ;
+INSERT INTO CHALLENGE VALUES(1, 'Find a confidential post', 'Find confidential informations about the Nostromo.') ;
 INSERT INTO CHALLENGE VALUES(2, 'XSS : Get some one else account', 'Use "$.ajax({url:''share?id_Note=3'',type:''GET'', data:''content=''+document.cookie})" as a click event on a button.   ') ;
 INSERT INTO CHALLENGE VALUES(3, 'The 8th passenger', 'Connect to one account of the crew.') ;
