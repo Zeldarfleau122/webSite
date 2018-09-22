@@ -201,6 +201,11 @@ public class AssemblerAController {
         memory.clearMemoryLineChange();
     }
 
+    @RequestMapping(value = "/hearthRequestPassword", method = RequestMethod.GET)
+    public String hearthPassword() {
+        return "redirect:/sound/hearthPassword.wav" ;
+    }
+
     @RequestMapping(value = "/assemblerDoorChallenge", method = RequestMethod.GET)
     public String setUp(Model model) {
         if (this.cpu == null) {
@@ -237,7 +242,7 @@ public class AssemblerAController {
 
         switch(userCommand) {
             case "help":
-                answer = "Commands :\nhelp - Show this message\n    reset - reset the cpu state.\n    step - step 1 instruction.\n    continue - run until input request or end.\nEmpty input will send previous command." ;
+                answer = "Commands :\nhelp - Show this message\n    reset - reset the cpu state.\n    step - step 1 instruction.\n    continue - run until input request or end.\nEmpty input will send previous command.\nSend an empty input will send the last command entered." ;
                 break;
             case "continue":
                 List<int[]> newMemoryLine = cpuState.getNewmemoryLine() ;

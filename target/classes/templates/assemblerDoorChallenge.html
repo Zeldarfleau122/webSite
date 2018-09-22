@@ -169,10 +169,10 @@ If needed, use "help" command.
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body mx-auto">
-                    <p>Input request.</p>
+                    <p>Password requested : (Hexadecimal input)</p>
                     <input id="userInput" name="userInput" type="text"/>
                 </div>
-                <label id="errorHexa" class="control-label" for="userInput" style="display: none;">Input with error</label>
+                <label id="errorHexa" class="control-label" for="userInput" style="display: none;">Input error : as an hexadecimal input the number of characters must be even.</label>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="inputValidation">Send</button>
                 </div>
@@ -199,7 +199,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
                     <h4 align="center" class="font-weight-bold" style="color:#ec9300;">Warning :</h4>
                 </div>
                 <div class="modal-body mx-auto">
-                    <p align="center" style="color:#ec9300; width: 500px;">This door leads to HAL's cognitive circuits. As part of your ship, the Discovery One, and for you safety it is highly recommand to keep this door closed. However, only in extreme necessity case, you can open the door by requesting the password needed to Hearth.</p>
+                    <p align="center" style="color:#ec9300; width: 500px;">This door leads to HAL's cognitive circuits. As part of your ship, the Discovery One, and for you safety it is highly recommand to keep this door closed. However, only in extreme necessity cases, you can open the door by requesting the password needed to <b>/hearthRequestPassword.</b></p>
                 </div>
             </div>
 
@@ -230,6 +230,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
             </div>
         </div>
     </div>
+
+        <div class="text-center" style="color: #000000;">by Jonathan Allam (2018) contact : thomasallam@outlook.fr</div>
     </div>
 </body>
 </html>
