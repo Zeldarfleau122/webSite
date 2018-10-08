@@ -1,7 +1,9 @@
 package com.controllers;
 
 import com.services.*;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -108,33 +110,34 @@ public class CommentaryController {
     }
 
     @RequestMapping(value= "/TaskSite/protectedNoteDetails", method = RequestMethod.GET)
-    public String noteDetails(@RequestParam(value="id") int id,@RequestParam(value="password") String password, Model model, HttpServletResponse response) {
+    //@RequestMapping(value="/TaskSite/protectedNoteDetails", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String noteDetails(@RequestParam(value="password") String password, Model model, HttpServletResponse response) {
         getChallenge(model) ;
 
-        List<Note> result = feedService.find(id) ;
-        Note note = result.get(0) ;
+        if (password.equals("Nostromo")) {
+            List<Note> result = feedService.find(3) ;
+            Note note = result.get(0) ;
 
-        model.addAttribute("noteDetailsTitle", note.title) ;
-        model.addAttribute("noteDetailsContent", note.content) ;
-        model.addAttribute("noteDetailsId", id) ;
+            model.addAttribute("noteDetailsTitle", note.title) ;
+            model.addAttribute("noteDetailsContent", note.content) ;
+            model.addAttribute("noteDetailsId", 3) ;
 
-        List<Commentary> commentaries = this.commentaryFeedService.fetchAll(id);
-        model.addAttribute("commentaries", commentaries);
+            List<Commentary> commentaries = this.commentaryFeedService.fetchAll(3);
+            model.addAttribute("commentaries", commentaries);
 
-        if (id == 3) {
-            if (password.equals("test")) {
-                //create a cookie with name 'website' and value 'javapointers'
-                Cookie cookie = new Cookie("Challenge1", "1");
-                //set the expiration time
-                //1 hour = 60 seconds x 60 minutes
-                cookie.setMaxAge(60 * 60);
-                //add the cookie to the  response
-                response.addCookie(cookie);
+            //create a cookie with name 'website' and value 'javapointers'
+            Cookie cookie = new Cookie("Challenge1", "1");
+            //set the expiration time
+            //1 hour = 60 seconds x 60 minutes
+            cookie.setMaxAge(60 * 60);
+            //add the cookie to the  response
+            response.addCookie(cookie);
 
-                return "TaskSiteTaskDetails" ;
-            }
+            return "TaskSiteTaskDetails" ;
         }
 
-        return "TaskSitePassword" ;
+        if (password.length() > 10)
+            throw new RuntimeException("Password length must not exceed 10 caracters.");
+        throw new RuntimeException("Error in the password.");
     }
 }
